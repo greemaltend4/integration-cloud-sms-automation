@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connecté'))
-  .catch(err => console.error('Erreur de connexion MongoDB:', err));
+  .catch(err => console.error('Erreur de connexion à MongoDB:', err));
 
 // Routes
 app.get('/', (req, res) => {
@@ -22,5 +22,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Serveur en cours d\'exécution sur le port ${PORT}`);
+  console.log(`Serveur en cours d'exécution sur le port ${PORT}`);
 });
